@@ -12,7 +12,7 @@ Console.WriteLine($"[{string.Join(", ", array)}] -> [{string.Join(", ", second_a
 
 string[] FindTheNecessary(string[] array)
 {
-    string[] output = new string[array.Length];
+    string[] output = new string[ArrayLenght(array)];
 
     for (int i = 0, j = 0; i < array.Length; i++)
     {
@@ -23,4 +23,19 @@ string[] FindTheNecessary(string[] array)
         }
     }
     return output;
+}
+
+int ArrayLenght(string[] array)
+{
+    int count = 0;
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            count++;
+        }
+    }
+
+    return count;
 }
