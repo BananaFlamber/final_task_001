@@ -6,3 +6,17 @@ Console.Clear();
 
 string[] array = new[] { "garry", "god", "spurs", "ball", "01", "02", "lol" };
 
+string[] FindTheNecessary(string[] array)
+{
+    string[] output = new string[array.Length];
+
+    for (int i = 0, j = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            output[j] = array[i];
+            j++;
+        }
+    }
+    return output;
+}
