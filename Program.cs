@@ -8,6 +8,8 @@ string[] array = new[] { "garry", "god", "spurs", "ball", "01", "02", "lol" };
 
 string[] second_array = FindTheNecessary(array);
 
+Console.WriteLine($"[{string.Join(", ", array)}] -> [{string.Join(", ", second_array)}]");
+
 string[] FindTheNecessary(string[] array)
 {
     string[] output = new string[array.Length];
